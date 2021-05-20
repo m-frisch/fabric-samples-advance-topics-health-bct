@@ -1,0 +1,59 @@
+{
+	"name": "first-network",
+	"version": "1.0.0",
+	"client": {
+		"tlsEnable": true,
+		"adminCredential": {
+			"id": "exploreradmin",
+			"password": "exploreradminpw"
+		},
+		"enableAuthentication": false,
+		"organization": "Org1MSP",
+		"connection": {
+			"timeout": {
+				"peer": {
+					"endorser": "300"
+				},
+				"orderer": "300"
+			}
+		}
+	},
+	"channels": {
+		"channel1": {
+			"peers": {
+				"peer0.org1.bct.mat": {}
+			},
+			"connection": {
+				"timeout": {
+					"peer": {
+						"endorser": "6000",
+						"eventHub": "6000",
+						"eventReg": "6000"
+					}
+				}
+			}
+		}
+	},
+	"organizations": {
+		"Org1MSP": {
+			"mspid": "Org1MSP",
+			"adminPrivateKey": {
+				"path": "/tmp/crypto/peerOrganizations/org1.bct.mat/users/Admin@org1.bct.mat/msp/keystore/priv_sk"
+			},
+			"peers": [
+				"peer0.org1.bct.mat"
+			],
+			"signedCert": {
+				"path": "/tmp/crypto/peerOrganizations/org1.bct.mat/users/Admin@org1.bct.mat/msp/signcerts/Admin@org1.bct.mat-cert.pem"
+			}
+		}
+	},
+	"peers": {
+		"peer0.org1.bct.mat": {
+			"tlsCACerts": {
+				"path": "/tmp/crypto/peerOrganizations/org1.bct.mat/peers/peer0.org1.bct.mat/tls/ca.crt"
+			},
+			"url": "grpcs://peer0.org1.bct.mat:7051"
+		}
+	}
+}

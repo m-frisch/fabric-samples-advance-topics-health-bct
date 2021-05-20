@@ -1,0 +1,2 @@
+docker exec orderer-cli sh -c 'peer channel fetch config latest_config.block -o orderer.bct.mat:7050 -c system-channel --tls --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/bct.mat/orderers/orderer.bct.mat/msp/tlscacerts/tlsca.bct.mat-cert.pem'
+docker cp orderer-cli:/opt/gopath/src/github.com/hyperledger/fabric/peer/latest_config.block ./channel-artifacts/latest_config.block
