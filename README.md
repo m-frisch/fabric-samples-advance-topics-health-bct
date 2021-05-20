@@ -18,6 +18,7 @@ sudo apt-get -y install git curl docker docker-compose jq nodejs npm
 sudo systemctl start docker && sudo systemctl enable docker
 sudo usermod -a -G docker bct
 sudo chmod +x /usr/bin/docker-compose
+sudo reboot
 ```
 
 ## Hyperledger Fabric Samples & binaries latest download
