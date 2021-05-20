@@ -34,5 +34,5 @@ git clone https://github.com/m-frisch/fabric-samples-advance-topics-health-bct
 ## Start network
 ```
 cd fabric-samples-advance-topics-health-bct/test-network/
-./restart_re.sh && prepare_pr.sh
+./restart_re.sh && ./prepare_pr.sh
 ```
