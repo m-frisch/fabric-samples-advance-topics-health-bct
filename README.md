@@ -24,6 +24,7 @@ sudo reboot
 ## Hyperledger Fabric Samples & binaries latest download
 ```
 sudo curl -sSL https://bit.ly/2ysbOFE | bash -s
+export PATH=~/fabric-samples/bin:$PATH
 ```
 
 ## Clone repository
